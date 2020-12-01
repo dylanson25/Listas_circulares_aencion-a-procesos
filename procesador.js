@@ -27,8 +27,18 @@ let procesador = function () {
             let P1 = new Proceso()
             this.agregar(P1)
             return true
-        }
-        else return false
+        } else return false
+    }
+    function decrementar() {
+        if (this.cuantosProcesos > 0) {
+            let probabilidad = Math.ceil(Math.random() * this.cuantosProcesos)
+            let aux = this.inicio, i = 0
+            while (i != probabilidad) {
+                aux = aux.siguiente
+                i++
+            }
+            aux.tareas--
+        }else return false
     }
     function iniciarCiclos() {
         if (this.ciclos === 300) {
@@ -36,6 +46,8 @@ let procesador = function () {
         }
         else {
             this.crearProceso()
+            this.decrementar()
+
         }
     }
 }
