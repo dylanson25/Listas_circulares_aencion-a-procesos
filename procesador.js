@@ -39,28 +39,3 @@ let procesador = function () {
         }
     }
 }
-/*
- new class procesador {
-    constructor() {
-        this.cuantosProcesos = 0
-        this.ciclos = 0
-        this.sinAtender = 0
-        this.atendidos = 0
-        this.inicio = null
-    }
-    crearProceso(){
-        let probabilidad = Math.ceil(Math.random() * 100)
-        if(probabilidad < 40){
-
-
-        }
-    }
-    iniciarCiclos() {
-       if(this.ciclos === 300){
-            return 'clicos sin atender: ' + this.sinAtender + ' clicos atendidos: ' + this.atendidos
-       }
-       else{
-
-       }
-    }
-}*/
