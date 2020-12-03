@@ -1,6 +1,6 @@
-let Proceso = require('./proceso')
+let proceso = require('./proceso')
 
-let procesador = function () {
+ function procesador() {
     this.cuantosProcesos = 0
     this.ciclos = 0
     this.sinAtender = 0
@@ -48,7 +48,7 @@ let procesador = function () {
     function crearProceso() {
         let probabilidad = Math.ceil(Math.random() * 100)
         if (probabilidad < 40) {
-            let P1 = new Proceso(('proceso' + this.cuantosProcesos))
+            let P1 = new proceso(('proceso' + this.cuantosProcesos))
             this.agregar(P1)
             return true
         } else return false
@@ -79,3 +79,5 @@ let procesador = function () {
         }
     }
 }
+
+exports.modules = procesador

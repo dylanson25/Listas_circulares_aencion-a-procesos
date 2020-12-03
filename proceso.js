@@ -1,7 +1,7 @@
-new class Proceso {
-    constructor(nombre) {
-        this.nombre = nombre
-        this.tareas = Math.ceil(Math.random() * 14)
-        this.siguiente = null
-    }
+function proceso(nombre) {
+    this.nombre = nombre
+    this.tareas = Math.ceil(Math.random() * 14)
+    this.siguiente = null
+
 }
+exports.module = proceso
